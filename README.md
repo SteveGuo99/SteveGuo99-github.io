@@ -1,37 +1,80 @@
-## Welcome to GitHub Pages
+# hydrogen
+轻盈、干净
 
-You can use the [editor on GitHub](https://github.com/SteveGuo99/SteveGuo99-github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+跟随她的脚步，开始你的博客之旅
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# #快速开始
 
-### Markdown
+## #准备
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+打开主题根目录下的`_config.yml`
 
-```markdown
-Syntax highlighted code block
+根据需求修改以下选项：
 
-# Header 1
-## Header 2
-### Header 3
+`title` : 更改你的博客名字
 
-- Bulleted
-- List
+`description` : 更改你的博客描述
 
-1. Numbered
-2. List
+`keywords` : 博客关键词(SEO相关)
 
-**Bold** and _Italic_ and `Code` text
+`baseurl` : 博客所在的目录文件夹，开头需带上`/`，如果为根目录请留空(建议将博客放置在根目录)
 
-[Link](url) and ![Image](src)
+`url` : 你的域名，如`atlinker.cn`无需加`http/https://`
+
+`bulidtime` : 博客建立时的时间戳，填写后将自动计算博客建立时间并显示在页脚. [日期转时间戳](https://tool.lu/timestamp/)
+
+`paginate` : 主页中显示的最大文章数，超过设定的数值文章自动归入下一页
+
+`background` : 博客首页主题图片路径
+
+`theme_color` : 博客顶部栏颜色，填颜色代码**但不要带上#号**
+
+`MathJax` : 是否开启MathJax
+
+`author` : 作者名
+
+## #设置域名
+
+修改根目录下的CNAME文件为你的域名即可
+
+#### 关于主题的基本设置已经完毕~
+
+---
+
+## #友链添加
+
+打开`_data`目录下的`friends.yml`文件，根据文件中模板新添代码即可
+
+---
+
+## #文章置顶
+
+在文章Front Matter添加stickie: true即可
+
+如：
+
+```
+ ---
+ layout: post
+ title: Hi
+ stickie: true
+ ---
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## #评论
 
-### Jekyll Themes
+#### #前提
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SteveGuo99/SteveGuo99-github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+> 必须确定已阅读[Valine](https://valine.js.org/quickstart.html)文档
 
-### Support or Contact
+配置文件:
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+`_data/social.yml` : 填写app id和key以及评论的相关信息
+
+`_includes/comments.html` : 评论设置
+
+确保配置无误后修改`_data/social.yml`中的`enable`值由`false`改为`ture`即可
+
+## #写在最后
+
+请花10分钟时间**认真**阅读文档，如还有疑难之处，请提[issues](https://github.com/link9596/hydrogen/issues/new)，我会尽力帮忙
