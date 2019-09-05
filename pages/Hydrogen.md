@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Billboard
-tagline: Biu~
+title: nullnull~
+tagline: null~
 ---
 
 <div style="text-align:center">:shit:nothing...</div>
